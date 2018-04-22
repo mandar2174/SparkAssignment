@@ -49,20 +49,6 @@ def rename_dataframe_column_name(input_dataframe,column_list):
         input_dataframe = input_dataframe.withColumnRenamed('C'+str(column_count), column)
         column_count = column_count + 1
         
-#     input_dataframe = input_dataframe.withColumnRenamed('C0', 'date_value')\
-#                     .withColumnRenamed('C0', 'date') \
-#                     .withColumnRenamed('C1', 'register')\
-#                     .withColumnRenamed('C2', 'private_agency')\
-#                     .withColumnRenamed('C3', 'state')\
-#                     .withColumnRenamed('C4', 'district')\
-#                     .withColumnRenamed('C5', 'sub_district')\
-#                     .withColumnRenamed('C6', 'pincode')\
-#                     .withColumnRenamed('C7', 'gender')\
-#                     .withColumnRenamed('C8', 'age')\
-#                     .withColumnRenamed('C9', 'aadhaar_generated')\
-#                     .withColumnRenamed('C10', 'rejected')\
-#                     .withColumnRenamed('C11', 'mobile_number')\
-#                     .withColumnRenamed('C12', '')
                         
     return input_dataframe
                         
