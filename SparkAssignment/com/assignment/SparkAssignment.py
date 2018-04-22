@@ -51,9 +51,6 @@ def rename_dataframe_column_name(input_dataframe,column_list):
         
                         
     return input_dataframe
-                        
-    
-    return input_dataframe
 
 if __name__ == '__main__':
     
