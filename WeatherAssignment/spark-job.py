@@ -127,7 +127,7 @@ if __name__ == '__main__':
 	
 	#write final result in hdfs location
 	print 'started writing weather curated data to hdfs location'
-	curation_result_df.select("station_identifier","observation_date_format","Precipitation","MaxTemparature","Snowfall","SnowDepth","Evaporation","WaterEquivalentSnowDepth","WaterEquivalentSnowFall","Sunshine").write.format("csv").save(path="hdfs:///tmp/weathercurated_result", mode='overwrite')
+	curation_result_df.na.fill(0.0).select("station_identifier","observation_date_format","Precipitation","MaxTemparature","Snowfall","SnowDepth","Evaporation","WaterEquivalentSnowDepth","WaterEquivalentSnowFall","Sunshine").write.format("csv").save(path="hdfs:///tmp/weathercurated_result", mode='overwrite')
 	print 'End processing to writing'
 	
 	
