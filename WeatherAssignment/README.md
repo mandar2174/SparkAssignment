@@ -12,7 +12,7 @@ weather-assignment.sh
 
 
 Output:
-weather-assignment-command-output.txt  ----->Contains command execution result
+weather-assignment-command-output.txt  ----->Contains command execution result 
 weather-assignment-output.txt          ------>Contains final weathercurated table sample 50 record after spark processing
 
 
