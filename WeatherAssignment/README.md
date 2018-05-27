@@ -2,10 +2,10 @@
 Assignment contains spark program to perform some analysis on weather data and generate some weather report
 
 Prerequisite :
-Before running program make sure you have install HDP and running.
+Before running program make sure you should install HDP 2.3 or above on linux machine.
 python 2.7 is installed on your machine.
-You have downloaded source code from githib.
 You have set hive.metastore.uris properties in spark-job.py file
+git should be installed on linux machine
 
 Main Scripts:
 weather-assignment.sh
