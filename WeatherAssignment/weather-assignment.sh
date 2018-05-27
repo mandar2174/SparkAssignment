@@ -5,7 +5,8 @@ echo "Started running spark assignment processing"
 #Download attached assignment zip and copy to /tmp/ folder
 
 mkdir -p /tmp/
-unzip WeatherAssignment.zip
+git clone https://github.com/mandar2174/SparkAssignment.git
+cd  WeatherAssignment
 
 #move to WeatherAssignment folder
 cd /tmp/WeatherAssignment
