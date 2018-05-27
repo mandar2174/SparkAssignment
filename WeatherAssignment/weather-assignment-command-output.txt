@@ -118,16 +118,16 @@ waterequivalentsnowfall float
 sunshine                float
 Time taken: 1.147 seconds, Fetched: 11 row(s)
 OK
-NLE00109078     2017-01-01      2.8     NULL    NULL    0.0     NULL    NULL    NULL    NULL    NULL
-CA003015600     2017-01-01      0.5     -9.2    NULL    NULL    NULL    NULL    NULL    NULL    NULL
-US1WAKG0146     2017-01-01      6.6     NULL    1.5     1.5     NULL    NULL    NULL    NULL    NULL
-USC00148038     2017-01-01      0.0     6.7     0.0     0.0     NULL    NULL    NULL    NULL    NULL
-USR0000AHIL     2017-01-01      NULL    4.4     NULL    NULL    NULL    NULL    NULL    NULL    NULL
-NO000099710     2017-01-01      0.3     -2.9    NULL    0.0     NULL    NULL    NULL    NULL    NULL
-ASN00040189     2017-01-01      0.0     NULL    NULL    NULL    NULL    NULL    NULL    NULL    NULL
-ASN00089010     2017-01-01      0.0     NULL    NULL    NULL    NULL    NULL    NULL    NULL    NULL
-US1TNMM0006     2017-01-01      8.6     NULL    NULL    NULL    NULL    NULL    NULL    NULL    NULL
-US1INWB0013     2017-01-01      0.0     NULL    NULL    NULL    NULL    NULL    NULL    NULL    NULL
+NLE00109078     2017-01-01      2.8     0.0    0.0    0.0     0.0    0.0    0.0    0.0    0.0
+CA003015600     2017-01-01      0.5     -9.2    0.0    0.0    0.0    0.0    0.0    0.0    0.0
+US1WAKG0146     2017-01-01      6.6     0.0    1.5     1.5     0.0    0.0    0.0    0.0    0.0
+USC00148038     2017-01-01      0.0     6.7     0.0     0.0     0.0    0.0    0.0    0.0    0.0
+USR0000AHIL     2017-01-01      0.0    4.4     0.0    0.0    0.0    0.0    0.0    0.0    0.0
+NO000099710     2017-01-01      0.3     -2.9    0.0    0.0     0.0    0.0    0.0    0.0    0.0
+ASN00040189     2017-01-01      0.0     0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0
+ASN00089010     2017-01-01      0.0     0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0
+US1TNMM0006     2017-01-01      8.6     0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0
+US1INWB0013     2017-01-01      0.0     0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0
 Time taken: 0.88 seconds, Fetched: 10 row(s)
 Query ID = hive_20180527164419_955eaa4e-f41e-4614-9ead-ae900d77a962
 Total jobs = 1
