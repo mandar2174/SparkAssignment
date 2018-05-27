@@ -2,8 +2,8 @@
 
 echo "Started downloading data"
 
-mkdir -p /tmp/spark-assignment
-cd /tmp/spark-assignment
+mkdir -p /tmp/WeatherAssignment/spark-assignment
+cd /tmp/WeatherAssignment/spark-assignment
 
 #download weather data
 wget -c  ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/by_year/2017.csv.gz
@@ -19,4 +19,6 @@ ls -alth .
 
 #Note : you can see some sample record on screen
 head -n 5 2017.csv
+
+chmod -R 755 /tmp/WeatherAssignment/spark-assignment
 

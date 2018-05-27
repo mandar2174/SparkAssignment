@@ -1,3 +1,4 @@
+--show all database present in hive
 show databases;
 
 --create database

@@ -1,0 +1,148 @@
+Output:
+----------------------------------------------------------------------------------------------------------
+Script1 : Download data from ftp to local machine
+
+[root@ip-172-31-32-131 scripts]# bash download-data.sh
+Started downloading data
+--2018-05-27 14:01:25--  ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/by_year/2017.csv.gz
+           => ‘2017.csv.gz’
+Resolving ftp.ncdc.noaa.gov (ftp.ncdc.noaa.gov)... 205.167.25.101, 2610:20:8040:2::101
+Connecting to ftp.ncdc.noaa.gov (ftp.ncdc.noaa.gov)|205.167.25.101|:21... connected.
+Logging in as anonymous ... Logged in!
+==> SYST ... done.    ==> PWD ... done.
+==> TYPE I ... done.  ==> CWD (1) /pub/data/ghcn/daily/by_year ... done.
+==> SIZE 2017.csv.gz ... 197356926
+==> PASV ... done.    ==> RETR 2017.csv.gz ... done.
+Length: 197356926 (188M) (unauthoritative)
+
+100%[==========================================================>] 197,356,926 61.6MB/s   in 3.2s
+
+2018-05-27 14:01:29 (58.7 MB/s) - ‘2017.csv.gz’ saved [197356926]
+
+total 189M
+-rw-r--r--.  1 root root 189M May 27 14:01 2017.csv.gz
+drwxr-xr-x.  2 root root   25 May 27 14:01 .
+drwxrwxrwt. 48 root root 4.0K May 27 14:01 ..
+total 1.2G
+drwxr-xr-x.  2 root root   22 May 27 14:01 .
+-rw-r--r--.  1 root root 1.2G May 27 14:01 2017.csv
+drwxrwxrwt. 48 root root 4.0K May 27 14:01 ..
+US1MNCV0008,20170101,PRCP,0,,,N,
+US1MNCV0008,20170101,SNOW,0,,,N,
+CA1MB000296,20170101,PRCP,0,,,N,
+US1MISW0005,20170101,PRCP,0,,,N,
+US1MISW0005,20170101,SNOW,0,,,N,
+
+---------------------------------------------------------------------------------------------------------
+Script2
+
+[hive@ip-172-31-42-247 spark-assignment]$ hive -f create-table.hql
+log4j:WARN No such property [maxFileSize] in org.apache.log4j.DailyRollingFileAppender.
+
+Logging initialized using configuration in file:/etc/hive/2.6.5.0-292/0/hive-log4j.properties
+OK
+default
+folio10
+sample_testby_rest
+sampletest_by_avi1
+sampletest_by_avi2
+weather
+Time taken: 14.887 seconds, Fetched: 6 row(s)
+OK
+Time taken: 1.021 seconds
+OK
+default
+folio10
+sample_testby_rest
+sampletest_by_avi1
+sampletest_by_avi2
+weather
+Time taken: 0.256 seconds, Fetched: 6 row(s)
+OK
+Time taken: 0.886 seconds
+OK
+Time taken: 0.819 seconds
+OK
+station_identifier      varchar(11)
+observation_date        varchar(100)
+observation_type        varchar(4)
+observation_value       string
+measurement_flag        varchar(1)
+quality_flag            varchar(1)
+source_flag             varchar(1)
+other                   string
+Time taken: 1.144 seconds, Fetched: 8 row(s)
+OK
+CA1MB000296     20170101        PRCP    0                       N
+US1MNCV0008     20170101        PRCP    0                       N
+US1MNCV0008     20170101        SNOW    0                       N
+US1MISW0005     20170101        PRCP    0                       N
+US1MISW0005     20170101        SNOW    0                       N
+US1MISW0005     20170101        SNWD    0                       N
+ASN00015643     20170101        TMAX    274                     a
+ASN00015643     20170101        TMIN    218                     a
+ASN00015643     20170101        PRCP    2                       a
+US1MAMD0069     20170101        PRCP    56                      N
+Time taken: 3.613 seconds, Fetched: 10 row(s)
+Query ID = hive_20180527164159_43b9a54b-6e46-48b2-991a-070d92982cdf
+Total jobs = 1
+Launching Job 1 out of 1
+Status: Running (Executing on YARN cluster with App id application_1527228311618_1805)
+
+--------------------------------------------------------------------------------
+        VERTICES      STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+--------------------------------------------------------------------------------
+Map 1 ..........   SUCCEEDED      3          3        0        0       0       0
+Reducer 2 ......   SUCCEEDED      1          1        0        0       0       0
+--------------------------------------------------------------------------------
+VERTICES: 02/02  [==========================>>] 100%  ELAPSED TIME: 113.33 s
+--------------------------------------------------------------------------------
+OK
+34578898
+Time taken: 136.17 seconds, Fetched: 1 row(s)
+OK
+Time taken: 0.313 seconds
+OK
+Time taken: 0.771 seconds
+OK
+station_identifier      varchar(11)
+observation_date        date
+precipitation           float
+maxtemparature          float
+mintemparature          float
+snowfall                float
+snowdepth               float
+evaporation             float
+waterequivalentsnowdepth        float
+waterequivalentsnowfall float
+sunshine                float
+Time taken: 1.147 seconds, Fetched: 11 row(s)
+OK
+NLE00109078     2017-01-01      2.8     NULL    NULL    0.0     NULL    NULL    NULL    NULL    NULL
+CA003015600     2017-01-01      0.5     -9.2    NULL    NULL    NULL    NULL    NULL    NULL    NULL
+US1WAKG0146     2017-01-01      6.6     NULL    1.5     1.5     NULL    NULL    NULL    NULL    NULL
+USC00148038     2017-01-01      0.0     6.7     0.0     0.0     NULL    NULL    NULL    NULL    NULL
+USR0000AHIL     2017-01-01      NULL    4.4     NULL    NULL    NULL    NULL    NULL    NULL    NULL
+NO000099710     2017-01-01      0.3     -2.9    NULL    0.0     NULL    NULL    NULL    NULL    NULL
+ASN00040189     2017-01-01      0.0     NULL    NULL    NULL    NULL    NULL    NULL    NULL    NULL
+ASN00089010     2017-01-01      0.0     NULL    NULL    NULL    NULL    NULL    NULL    NULL    NULL
+US1TNMM0006     2017-01-01      8.6     NULL    NULL    NULL    NULL    NULL    NULL    NULL    NULL
+US1INWB0013     2017-01-01      0.0     NULL    NULL    NULL    NULL    NULL    NULL    NULL    NULL
+Time taken: 0.88 seconds, Fetched: 10 row(s)
+Query ID = hive_20180527164419_955eaa4e-f41e-4614-9ead-ae900d77a962
+Total jobs = 1
+Launching Job 1 out of 1
+Status: Running (Executing on YARN cluster with App id application_1527228311618_1805)
+
+--------------------------------------------------------------------------------
+        VERTICES      STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+--------------------------------------------------------------------------------
+Map 1 ..........   SUCCEEDED      1          1        0        0       0       0
+Reducer 2 ......   SUCCEEDED      1          1        0        0       0       0
+--------------------------------------------------------------------------------
+VERTICES: 02/02  [==========================>>] 100%  ELAPSED TIME: 56.67 s
+--------------------------------------------------------------------------------
+OK
+11265241
+Time taken: 61.507 seconds, Fetched: 1 row(s)
+
