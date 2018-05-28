@@ -81,7 +81,7 @@ if __name__ == '__main__':
 
 	#created dataframe for WaterEquivalentSnowDepth :WESD catgory
 	print "Started WaterEquivalentSnowDepth processing"
-	water_equivalent_snow_depth_df = sparkSession.sql("select station_identifier,observation_date,'WaterEquivalentSnowDepth' as weather_category,cast((sum(observation_value)/10) as float) as calculation_result  from weather.weatherraw where observation_type='WESD' group by station_identifier,observation_date")
+	water_equivalent_snow_depth_df = sparkSession.sql("select station_identifier,observation_date,'WaterEquivalentSnowDepth' as weather_category,cast((sum(observation_value)) as float) as calculation_result  from weather.weatherraw where observation_type='WESD' group by station_identifier,observation_date")
 	#water_equivalent_snow_depth_df.show()
 	#water_equivalent_snow_depth_df.printSchema()
 	print "End WaterEquivalentSnowDepth processing"
